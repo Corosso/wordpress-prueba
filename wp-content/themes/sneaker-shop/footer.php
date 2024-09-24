@@ -11,22 +11,12 @@
 
 ?>
 
-	<footer id="colophon" class="site-footer">
-		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'sneaker-shop' ) ); ?>">
-				<?php
-				/* translators: %s: CMS name, i.e. WordPress. */
-				printf( esc_html__( 'Proudly powered by %s', 'sneaker-shop' ), 'WordPress' );
-				?>
-			</a>
-			<span class="sep"> | </span>
-				<?php
-				/* translators: 1: Theme name, 2: Theme author. */
-				printf( esc_html__( 'Theme: %1$s by %2$s.', 'sneaker-shop' ), 'sneaker-shop', '<a href="https://github.com/Corosso">Coro</a>' );
-				?>
-		</div><!-- .site-info -->
-	</footer><!-- #colophon -->
-</div><!-- #page -->
+<footer class="footer">
+        <div class="container">
+            <p>&copy; 2023 Tienda de Zapatos</p>
+            <a href="#">Trabaja con nosotros</a> | <a href="#">Contacto</a> | <a href="#">Terminos y condiciones</a> | <a href="#">Politica de privacidad</a> | <a href="#">Contactenos</a> | <a href="#">Quiénes somos</a>
+        </div>
+    </footer>
 
 <?php wp_footer(); ?>
 

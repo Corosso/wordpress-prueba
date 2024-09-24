@@ -138,8 +138,15 @@ add_action( 'widgets_init', 'sneaker_shop_widgets_init' );
  * Enqueue scripts and styles.
  */
 function sneaker_shop_scripts() {
-	wp_enqueue_style( 'sneaker-shop-style', get_stylesheet_uri(), array(), _S_VERSION );
+
+	function mytheme_enqueue_assets() {
+		wp_enqueue_style( 'mytheme-styles', get_stylesheet_uri() );
+	}
+	add_action( 'wp_enqueue_scripts', 'mytheme_enqueue_assets' );
+	
+	wp_enqueue_style( 'sneaker-shop-style', get_stylesheet_uri(), array(), _S_VERSION );	
 	wp_style_add_data( 'sneaker-shop-style', 'rtl', 'replace' );
+
 
 	wp_enqueue_script( 'sneaker-shop-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true );
 
