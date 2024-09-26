@@ -20,8 +20,8 @@ get_header();
       <div class="container">
         <div class="row">
             <div class="col-md-3">
-                <div class="product-card">
-                    <img src="wordpress-prueba\wp-content\themes\sneaker-shop\icons\95.png" alt="Nike '95">
+                <div class="product-card">                    
+                    <img src="<?php echo get_template_directory_uri() . '/icons/95.png'; ?>" id='img' alt="Nike '95">
                     <h4>Nike '95</h4>
                     <p>Hombre</p>
                     <p>$500.000</p>
@@ -29,7 +29,8 @@ get_header();
             </div>
             <div class="col-md-3">
                 <div class="product-card">
-                    <img src="icons/adi2000.png" alt="Adidas Adi2000">
+                    <img src="<?php echo get_template_directory_uri() . '/icons/adi2000.png'; ?>" id='img' alt="Adidas Adi2000">
+                    
                     <h4>Adidas Adi2000</h4>
                     <p>Hombre</p>
                     <p>$500.000</p>
@@ -37,7 +38,8 @@ get_header();
             </div>
             <div class="col-md-3">
                 <div class="product-card">
-                    <img src="icons/blazer.png" alt="Nike Blazer">
+                    
+                    <img src="<?php echo get_template_directory_uri() . '/icons/blazer.png'; ?>" id='img' alt="Nike Blazer">
                     <h4>Nike Blazer</h4>
                     <p>Hombre</p>
                     <p>$500.000</p>
@@ -46,7 +48,7 @@ get_header();
             <div class="featured-product col-md-3">
                 <h3>PRODUCTO DESTACADO</h3>
                 <div class="product-card">
-                    <img src="icons/tn.png" alt="Nike TN">
+                    <img src="<?php echo get_template_directory_uri() . '/icons/tn.png'; ?>" id='img' alt="Nike TN">
                     <h4>Nike TN</h4>
                     <p>Hombre</p>
                     <p>$800.000</p>
@@ -57,7 +59,8 @@ get_header();
         <div class="row">
             <div class="col-md-3">
                 <div class="product-card">
-                    <img src="icons/initiator.png" alt="Nike Inititator">
+                    
+                    <img src="<?php echo get_template_directory_uri() . '/icons/initiator.png'; ?>" id='img' alt="Nike Inititator">
                     <h4>Nike Inititator</h4>
                     <p>Hombre</p>
                     <p>$500.000</p>
@@ -65,7 +68,8 @@ get_header();
             </div>
             <div class="col-md-3">
                 <div class="product-card">
-                    <img src="icons/nike97.png" alt="Nike '97">
+                    
+                    <img src="<?php echo get_template_directory_uri() . '/icons/nike97.png'; ?>" id='img' alt="Nike '97">
                     <h4>Nike '97</h4>
                     <p>Hombre</p>
                     <p>$500.000</p>
@@ -73,7 +77,8 @@ get_header();
             </div>
             <div class="col-md-3">
                 <div class="product-card">
-                    <img src="icons/forum.png" alt="Adidas Forum">
+                    <img src="<?php echo get_template_directory_uri() . '/icons/forum.png'; ?>" id='img' alt="Adidas Forum">
+                    
                     <h4>Adidas Forum</h4>
                     <p>Hombre</p>
                     <p>$500.000</p>
@@ -84,32 +89,10 @@ get_header();
         
     </div>
 
-		<?php
-		if ( have_posts() ) :
-
-			if ( is_home() && ! is_front_page() ) :
-
-			endif;
-
-			/* Start the Loop */
-			while ( have_posts() ) :
-				the_post();
-
-				
-				
-
-			endwhile;
-
-			
-		else :
-
-			get_template_part( 'template-parts/content', 'none' );
-
-		endif;
-		?>
+		
 
 	</main><!-- #main -->
 
 <?php
-get_sidebar();
+
 get_footer();

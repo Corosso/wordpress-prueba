@@ -1,0 +1,9 @@
+{
+    "php.completion.autoimport": "hide",
+    "php.completion.autoimport-docblock": "hide",
+    "php.completion.showDeprecated": "hide",
+    "php.completion.showNamespaceLabel": false,
+    "php.inlayHints.parameters.enabled": false,
+    "php.inlayHints.types.return": false,
+    "php.inlayHints.types.suppressVariableFromLiteral": false
+}
